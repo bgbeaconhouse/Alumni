@@ -48,6 +48,10 @@ model User {
   username       String   @unique
   password       String   // Will store the hashed password
   email          String   @unique
+  firstName      String
+  lastName       String 
+  phoneNumber    String   @unique
+  yearGraduated   Int
   registrationDate DateTime @default(now())
   approved       Boolean  @default(false) // Indicates if the account is approved by you
   profilePictureUrl String? // URL to the user's profile picture
